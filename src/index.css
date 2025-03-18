@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hidden with opacity 0 */
+.hidden-opacity {
+  opacity: 0;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 1;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@layer base {
+  .cursor-newtab {
+    cursor: url('/images/new-tab.png') 10 10, pointer;
+  }
+  /* #region =========== Typography =========== */
+  .heading {
+    @apply text-center font-primary text-4xl font-black leading-relaxed text-black md:text-5xl lg:text-8xl;
+  }
+  .heading .fancy {
+    @apply block -rotate-6 text-[1.5em] font-medium;
+  }
+  .fancy {
+    @apply font-cursive text-primary-base;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes divider-animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Initial state */
+.initial {
+  opacity: 0;
+}
+
+.review-card-container {
+  position: relative;
+}
+
+.reviews {
+  display: inline-block;
+  white-space: nowrap;
+}
